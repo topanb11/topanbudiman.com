@@ -9,9 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "framer-motion": "^9.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "typescript-plugin-css-modules": "^4.1.1"
+    "react-social-icons": "^5.15.0",
+    "typescript-plugin-css-modules": "^4.1.1",
+    "typewriter-effect": "^2.19.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",
