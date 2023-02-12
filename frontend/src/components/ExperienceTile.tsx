@@ -9,7 +9,6 @@ const ExperienceTile = ({order, company, title, location, duration, image }: Exp
 		<motion.div
 			initial="hidden"
 			whileInView="visible"
-			viewport={{ once: true }}
 			transition={{ duration: 0.8}}
 			variants={{
 			visible: { x: 0, opacity: 1},

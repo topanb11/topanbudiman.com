@@ -13,7 +13,6 @@ const About = () => {
 				<motion.div
 					initial="hidden"
 					whileInView="visible"
-					viewport={{ once: true }}
 					transition={{ duration: 0.75 }}
 					variants={{
 					visible: { x: 0, opacity: 1},

@@ -1,4 +1,4 @@
 export interface WebLinks {
-	title: string,
+	title: string
 	id: string
 }

@@ -50,70 +50,87 @@ export const ExperienceData: ExperienceCard[] = [
 
 export const SkillData: SkillsCard[] = [
 	{
+		order: 1,
 		level: "85",
 		image: Python
 	},
 	{
+		order: 2,
 		level: "85",
 		image: JS
 	},
 	{
+		order: 3,
 		level: "70",
 		image: TS
 	},
 	{
+		order: 4,
 		level: "90",
 		image: Java
 	},
 	{
+		order: 5,
 		level: "75",
 		image: Cpp
 	},
 	{
+		order: 6,
 		level: "95",
 		image: HTML
 	},
 	{
+		order: 7,
 		level: "85",
 		image: CSS
 	},
 	{
+		order: 8,
 		level: "95",
 		image: React
 	},
 	{
+		order: 9,
 		level: "80",
 		image: NodeJS
 	},
 	{
+		order: 10,
 		level: "80",
 		image: NextJS
 	},
 	{
+		order: 11,
 		level: "85",
 		image: JavaSpring
 	},
 	{
+		order: 12,
 		level: "95",
 		image: Tailwind
 	},
 	{
+		order: 13,
 		level: "90",
 		image: MUI
 	},
 	{
+		order: 14,
 		level: "90",
 		image: FastAPI
 	},
 	{
+		order: 15,
 		level: "80",
 		image: PostgreSQL
 	},
 	{
+		order: 16,
 		level: "80",
 		image: OracleDB
 	},
 	{
+		order: 17,
 		level: "85",
 		image: MySQL
 	},
