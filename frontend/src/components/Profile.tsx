@@ -18,7 +18,9 @@ const Links: WebLinks[] = [
 const ScrollTo = (id: string) => {
 	const element = document.getElementById(id);
 	if (element) {
-		element.scrollIntoView({behavior: "smooth"});
+		// element.scrollIntoView({behavior: "smooth"});
+		const y = element.getBoundingClientRect().top + window.pageYOffset - 20;
+		window.scrollTo({top: y, behavior: "smooth"});
 	}
 }
 
