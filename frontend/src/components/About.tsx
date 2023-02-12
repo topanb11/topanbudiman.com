@@ -5,7 +5,7 @@ const DESKTOP_VIEW = "md:flex-row md:space-x-12"
 
 const About = () => {
 	return (
-		<div id="about-section" className="h-screen">
+		<div id="about-section" className="h-screen md:mb-[600px]">
 			<h1 className="text-3xl text-grey text-center mb-24 md:mb-36">A B O U T</h1>
 			<div 
 				className={`flex flex-col space-y-6 text-white items-center justify-center ${DESKTOP_VIEW}`}
@@ -23,7 +23,7 @@ const About = () => {
 					<img className="rounded-lg w-80 md:w-[500px]" src={about}/>
 				</motion.div>
 				<div className="text-center md:text-left">
-					<h2 className="mb-5 md:text-3xl">Here is a <span className="underline">little</span> background</h2>
+					<h2 className="mb-5 font-semibold text-xl md:text-3xl">Here is a <span className="underline">little</span> background</h2>
 					<p className="w-96 md:w-[700px] text-justify md:text-xl">
 						I'm Topan! I am currently in my third year of Software Engineering at
 						the University of Calgary. My current interest at the moment is full-stack
