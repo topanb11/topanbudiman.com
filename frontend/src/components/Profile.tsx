@@ -22,16 +22,18 @@ const ScrollTo = (id: string) => {
 	}
 }
 
+let DESKTOP_CONTAINER = "md:border-2 md:border-gre md:h-[850px] md:w-[850px] md:rounded-full md:space-y-1 md:mx-auto"
+
 const Profile = () => {
 	return (
-		<div className="bg-dark text-white h-screen flex flex-col items-center space-y-9">
-			<div className="border-[1px] border-grey w-[390px] rounded-full text-center">
-				<img className="rounded-full p-20" src={headshot}/>
+		<div className={`bg-dark text-white h-screen flex flex-col items-center space-y-6 ${DESKTOP_CONTAINER}`}>
+			<div className="border-[1px] border-grey w-[360px] rounded-full md:border-none md:mt-52">
+				<img className="rounded-full p-20 md:p-5" src={headshot}/>
 			</div>
-			<div className="flex flex-row space-x-10 text-[1.7rem]">
-				<h1>S O F T W A R E</h1><h1>E N G I N E E R</h1>
+			<div className="flex flex-row space-x-10 text-[1.1rem] md:text-[1.5rem]">
+				<h1 className="mb-2 md:mb-6">S O F T W A R E</h1><h1>E N G I N E E R</h1>
 			</div>
-			<div className="text-3xl font-bold">
+			<div className="text-3xl md:text-5xl font-bold">
 				<TypewriterComponent
 					options={{
 						strings: StringList,
@@ -41,11 +43,11 @@ const Profile = () => {
 					}}
 				/>
 			</div>
-			<ul className="flex space-x-6">
+			<ul className="flex space-x-4">
 				{Links.map(data => {
 					return (
 						<li 
-							className="hover:cursor-pointer hover:text-dark hover:bg-white rounded-md px-2 ease-in duration-300"
+							className="mt-4 md:mt-8 text-lg hover:cursor-pointer hover:text-dark hover:bg-white rounded-md px-1 md:px-4 ease-in duration-300"
 							key={data.title}
 							onClick={() => {ScrollTo(data.id)}}
 						>
