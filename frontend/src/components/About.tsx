@@ -24,7 +24,7 @@ const About = () => {
 				</motion.div>
 				<div className="text-center md:text-left">
 					<h2 className="mb-5 font-semibold text-xl md:text-3xl">Here is a <span className="underline">little</span> background</h2>
-					<p className="w-96 md:w-[700px] text-justify md:text-xl">
+					<p className="w-96 md:w-[700px] md:text-xl">
 						I'm Topan! I am currently in my third year of Software Engineering at
 						the University of Calgary. My current interest at the moment is full-stack
 						development which is reflected by my projects and work experience! You can

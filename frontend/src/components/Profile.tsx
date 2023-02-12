@@ -1,6 +1,6 @@
 import TypewriterComponent from "typewriter-effect";
 import headshot from "../assets/headshot.jpg";
-import { WebLinks } from "../interfaces/experience"
+import { WebLinks } from "../interfaces/weblinks"
 
 const StringList: string[] = [
 	"Hi, my name is Topan!",

@@ -6,8 +6,3 @@ export interface ExperienceCard {
 	duration: string,
 	location: string
 }
-
-export interface WebLinks {
-	title: string,
-	id: string
-}
