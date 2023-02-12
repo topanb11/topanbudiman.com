@@ -24,7 +24,7 @@ const ScrollTo = (id: string) => {
 	}
 }
 
-let DESKTOP_CONTAINER = "md:border-2 md:border-grey md:h-[850px] md:w-[850px] md:rounded-full md:space-y-1 md:mx-auto md:mb-96"
+let DESKTOP_CONTAINER = "md:border-2 md:border-grey md:h-[850px] md:w-[850px] md:rounded-full md:space-y-1 md:mx-auto md:mb-[600px]"
 
 const Profile = () => {
 	return (
