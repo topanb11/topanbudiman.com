@@ -7,7 +7,7 @@ import Projects from "./components/Projects"
 
 const App = () => {
   return (
-		<div className="bg-dark align">
+		<div className="bg-dark">
 			<Navbar/>
 			<Profile/>
 			<About/>

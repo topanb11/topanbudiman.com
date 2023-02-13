@@ -3,7 +3,7 @@ import ExperienceTile from "./ExperienceTile";
 
 const Experience = () => {
 	return (
-		<div id="experience-section" className="text-white h-screen md:mb-[600px]"> 
+		<div id="experience-section" className="text-white h-screen overflow-hidden"> 
 			<h1 className="text-3xl text-grey text-center mb-24 md:mb-36">E X P E R I E N C E</h1>
 			<ul>
 				{ExperienceData.map(value => {

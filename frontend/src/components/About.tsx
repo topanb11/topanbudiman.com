@@ -5,7 +5,7 @@ const DESKTOP_VIEW = "md:flex-row md:space-x-12"
 
 const About = () => {
 	return (
-		<div id="about-section" className="h-screen md:mb-[600px]">
+		<div id="about-section" className="h-screen">
 			<h1 className="text-3xl text-grey text-center mb-24 md:mb-36">A B O U T</h1>
 			<div 
 				className={`flex flex-col space-y-6 text-white items-center justify-center ${DESKTOP_VIEW}`}
