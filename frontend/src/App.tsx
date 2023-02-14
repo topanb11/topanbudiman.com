@@ -7,14 +7,14 @@ import Projects from "./components/Projects"
 
 const App = () => {
   return (
-		<div className="bg-dark">
+		<>
 			<Navbar/>
 			<Profile/>
 			<About/>
 			<Experience/>
 			<Skills/>
 			<Projects/>
-		</div>
+		</>
   )
 }
 

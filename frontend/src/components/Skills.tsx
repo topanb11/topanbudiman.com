@@ -3,9 +3,9 @@ import SkillTile from "./SkillTile";
 
 const Skills = () => {
 	return (
-		<div id="skills-section" className="text-white h-screen md:mb-[600px] text-center">
-			<h1 className="text-3xl text-grey mb-24 md:mb-36">S K I L L S</h1>
-				<ul className="flex flex-wrap md:w-[850px] mx-auto">
+		<div id="skills-section" className="text-white h-fit text-center pb-24 bg-dark">
+			<h1 className="text-3xl text-grey mb-10">S K I L L S</h1>
+				<ul className="flex flex-wrap md:w-[850px] mx-auto justify-center">
 					{SkillData.map(value => {
 						return (
 							<SkillTile {...value}/>
