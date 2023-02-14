@@ -27,7 +27,7 @@ let DESKTOP_CONTAINER = "md:border-2 md:border-grey md:h-[750px] md:w-[750px] md
 
 const Profile = () => {
 	return (
-		<div className="h-screen bg-dark">
+		<div className="min-h-screen bg-dark">
 			<div className={`bg-dark text-white flex flex-col items-center space-y-6 ${DESKTOP_CONTAINER}`}>
 				<div className="border-[1px] border-grey w-[320px] rounded-full md:border-none md:mt-52">
 					<img className="rounded-full p-20 md:p-5" src={headshot}/>

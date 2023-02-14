@@ -21,7 +21,7 @@ const Navbar = () => {
 					<a href="https://www.linkedin.com/in/topanb/" target="_blank">
 						<LinkedInIcon sx={ICONS}/>
 					</a>
-					<a href="https://www.linkedin.com/in/topanb/" target="_blank">
+					<a href="https://github.com/topanb11" target="_blank">
 						<GitHubIcon sx={ICONS} />
 					</a>
 					<a href={resume} target="_blank">
