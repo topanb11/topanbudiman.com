@@ -1,8 +1,8 @@
 export interface ExperienceCard {
 	order: number
 	company: string
-	image: string
-	title: string
-	duration: string
+	headshot: Object
+	experience: string
+	date: string
 	location: string
 }

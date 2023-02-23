@@ -2,14 +2,26 @@ import { motion } from "framer-motion";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import DescriptionIcon from '@mui/icons-material/Description';
-import resume from "../assets/TopanBudiman_Resume.pdf"
+import { useEffect, useState } from "react";
+import client from "../secrets";
 
 const ICONS: Object = {
 	fontSize: 35,
 	color: "#F7F7F7"
-}
+};
 
 const Navbar = () => {
+	const [resume, setResume] = useState("");
+
+	const getResume = () => {
+		client.getEntry('46Qc3NETw9OPsZX3rEmqD9')
+		.then((entry) => setResume(entry.fields.assets.fields.file.url));
+	}
+
+	useEffect(() => {
+		getResume();
+	}, [])
+
 	return (
 			<div className="relative bg-dark">
 				<motion.div 
