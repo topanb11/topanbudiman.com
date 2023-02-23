@@ -1,11 +1,12 @@
+import { useEffect, useState } from "react";
 import TypewriterComponent from "typewriter-effect";
-import headshot from "../assets/headshot.jpg";
 import { WebLinks } from "../interfaces/weblinks"
+import { headshot } from "../interfaces/headshot";
+import client from "../secrets";
 
 const StringList: string[] = [
 	"Hi, my name is Topan!",
-	"3rd Year SWE @ UCalgary",
-	"oh yeaaaaaaa"
+	"3rd Year SWE @ UCalgary"
 ]
 
 const Links: WebLinks[] = [
@@ -23,17 +24,29 @@ const ScrollTo = (id: string) => {
 	}
 }
 
-let DESKTOP_CONTAINER = "md:border-2 md:border-grey md:h-[750px] md:w-[750px] md:rounded-full md:space-y-0 md:mx-auto"
+let DESKTOP_CONTAINER = "md:border-2 md:border-grey md:h-[800px] md:w-[800px] md:rounded-full md:space-y-2 md:mx-auto"
 
 const Profile = () => {
+	const [headshot, setHeadshot] = useState("");
+
+	const getHeadshotUrl = async(): Promise<void> => {
+		client.getEntry<headshot>('5OthejOTaaTviOM4FFLXFa')
+		.then(res => setHeadshot(res.fields.imageUrl.fields.file.url))
+	}
+
+	useEffect(() => {
+		getHeadshotUrl();
+
+	}, [])
+
 	return (
-		<div className="min-h-screen bg-dark">
+		<div className="min-h-screen bg-dark pt-8 md:pt-0">
 			<div className={`bg-dark text-white flex flex-col items-center space-y-6 ${DESKTOP_CONTAINER}`}>
 				<div className="border-[1px] border-grey w-[320px] rounded-full md:border-none md:mt-52">
 					<img className="rounded-full p-20 md:p-5" src={headshot}/>
 				</div>
 				<div className="flex flex-row space-x-10 text-grey text-[1.1rem] md:text-lg md:h-10">
-					<h1 className="mb-2 md:mb-6">S O F T W A R E</h1><h1>E N G I N E E R</h1>
+					<h2 className="mb-2 md:mb-8">S O F T W A R E</h2><h2>E N G I N E E R</h2>
 				</div>
 				<div className="text-2xl md:text-4xl font-bold md:h-6">
 					<TypewriterComponent
@@ -41,7 +54,7 @@ const Profile = () => {
 							strings: StringList,
 							autoStart: true,
 							loop: true,
-							delay: 80
+							delay: 70
 						}}
 					/>
 				</div>

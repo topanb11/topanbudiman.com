@@ -11,12 +11,12 @@ const ICONS: Object = {
 
 const Navbar = () => {
 	return (
-			<div className="bg-dark">
+			<div className="relative bg-dark">
 				<motion.div 
 					initial={{x: -500}}
 					animate={{x: 0}}
 					transition={{x: {type: "spring" , duration: 1}}}
-					className="bg-dark text-white h-18 flex flex-row items-center space-x-3 pl-4 py-8"
+					className="bg-dark text-white h-16 flex flex-row items-center space-x-3 pl-4 py-8"
 				>
 					<a href="https://www.linkedin.com/in/topanb/" target="_blank">
 						<LinkedInIcon sx={ICONS}/>
