@@ -10,7 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
     "@mui/icons-material": "^5.11.0",
+    "@mui/material": "^5.11.10",
+    "contentful": "^9.3.3",
     "framer-motion": "^9.0.2",
     "netlify-cli": "^12.12.0",
     "react": "^18.2.0",
