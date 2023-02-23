@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import TypewriterComponent from "typewriter-effect";
 import { WebLinks } from "../interfaces/weblinks"
-import { headshot } from "../interfaces/headshot";
 import client from "../secrets";
 
 const StringList: string[] = [
@@ -30,7 +29,7 @@ const Profile = () => {
 	const [headshot, setHeadshot] = useState("");
 
 	const getHeadshotUrl = async(): Promise<void> => {
-		client.getEntry<headshot>('5OthejOTaaTviOM4FFLXFa')
+		client.getEntry('5OthejOTaaTviOM4FFLXFa')
 		.then(res => setHeadshot(res.fields.imageUrl.fields.file.url))
 	}
 
@@ -62,7 +61,7 @@ const Profile = () => {
 					{Links.map(data => {
 						return (
 							<li 
-								className="text-sm md:text-lg mt-4 md:mt-8 text-grey hover:cursor-pointer hover:text-dark hover:bg-white rounded-md px-1 md:px-4 ease-in duration-300"
+								className="text-sm md:text-lg mt-4 md:mt-8 text-grey hover:cursor-pointer hover:text-dark hover:bg-white rounded-md px-1 md:px-4 ease-in duration-300 tracking-wide"
 								key={data.title}
 								onClick={() => {ScrollTo(data.id)}}
 							>
