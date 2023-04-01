@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { Headshot } from "../interfaces/Headshot";
 import client from "../secrets";
 
 const DESKTOP_VIEW = "md:flex-row md:space-x-12"
@@ -8,7 +9,7 @@ const About = () => {
 	const [aboutPhoto, setAboutPhoto] = useState("");
 
 	const getAboutPhoto = () => {
-		client.getEntry('2wHqWNRPcnEafmjwJf1L7w')
+		client.getEntry<Headshot>('2wHqWNRPcnEafmjwJf1L7w')
 		.then((res) => setAboutPhoto(res.fields.imageUrl.fields.file.url));
 	}
 
