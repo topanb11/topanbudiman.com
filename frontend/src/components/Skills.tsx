@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import SkillTile from './SkillTile';
-import { SkillsCard } from '../interfaces/Skills';
+import { SkillsCard } from '../interfaces/skills';
 import client from '../secrets';
 
 const Skills = () => {
@@ -9,7 +9,7 @@ const Skills = () => {
 	const getSkills = () => {
 		client.getEntries<SkillsCard>({ content_type: 'skillCard' }).then((res) => {
 			const entries = res.items.map((entry) => entry.fields);
-			entries.sort((a, b) => a.order - b.order)
+			entries.sort((a, b) => a.order - b.order);
 			setSkillData(entries);
 		});
 	};
