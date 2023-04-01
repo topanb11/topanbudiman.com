@@ -9,6 +9,7 @@ const Experience = () => {
 	const getExperienceData = () => {
 		client.getEntries<ExperienceCard>({ content_type: 'topan' }).then((res) => {
 			const entries = res.items.map((entry) => entry.fields);
+			entries.sort((a, b) => a.order - b.order);
 			setExperienceData(entries);
 		});
 	};
