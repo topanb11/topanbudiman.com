@@ -1,8 +1,10 @@
+import * as contentful from 'contentful'
+
 export interface ExperienceCard {
-	order: number
 	company: string
-	headshot: Object
-	experience: string
 	date: string
+	experience: string
+	headshot: contentful.Asset
 	location: string
+	order: number
 }

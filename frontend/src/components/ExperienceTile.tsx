@@ -1,8 +1,7 @@
-import { ExperienceCard } from "../interfaces/experience";
 import { motion } from "framer-motion";
+import { ExperienceCard } from "../interfaces/experience";
 
 const ExperienceTile = ({order, company, experience, location, date, headshot }: ExperienceCard) => {
-
 	const EXPERIENCE_DETAILS = "italic text-grey md:text-lg"
 
 	return (

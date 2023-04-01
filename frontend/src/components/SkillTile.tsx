@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { SkillsCard } from "../interfaces/skills";
+import { SkillsCard } from "../interfaces/Skills";
 import { motion } from "framer-motion";
 
 const SKILL_LEVEL = "text-dark flex opacity-0 hover:opacity-100 ease-in duration-300 hover:bg-white absolute items-center inset-0 rounded-full cursor-pointer justify-center font-bold text-3xl md:text-5xl"
