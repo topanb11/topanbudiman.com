@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import TypewriterComponent from "typewriter-effect";
-import { WebLinks } from "../interfaces/weblinks"
 import client from "../secrets";
+import { Headshot } from "../interfaces/Headshot";
 
 const StringList: string[] = [
 	"Hi, my name is Topan!",
 	"3rd Year SWE @ UCalgary"
 ]
 
-const Links: WebLinks[] = [
+const Links = [
 	{title: "ABOUT", id: "about-section"},
 	{title: "EXPERIENCE", id: "experience-section"},
 	{title: "SKILLS", id: "skills-section"},
@@ -28,9 +28,9 @@ let DESKTOP_CONTAINER = "md:border-2 md:border-grey md:h-[800px] md:w-[800px] md
 const Profile = () => {
 	const [headshot, setHeadshot] = useState("");
 
-	const getHeadshotUrl = async(): Promise<void> => {
-		client.getEntry('5OthejOTaaTviOM4FFLXFa')
-		.then(res => setHeadshot(res.fields.imageUrl.fields.file.url))
+	const getHeadshotUrl = () => {
+		client.getEntry<Headshot>('5OthejOTaaTviOM4FFLXFa')
+		.then((res) => setHeadshot(res.fields.imageUrl.fields.file.url))
 	}
 
 	useEffect(() => {
