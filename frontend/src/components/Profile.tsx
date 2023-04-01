@@ -12,7 +12,6 @@ const Links = [
 	{ title: 'ABOUT', id: 'about-section' },
 	{ title: 'EXPERIENCE', id: 'experience-section' },
 	{ title: 'SKILLS', id: 'skills-section' },
-	{ title: 'PROJECTS', id: 'projects-section' },
 ];
 
 const ScrollTo = (id: string) => {
