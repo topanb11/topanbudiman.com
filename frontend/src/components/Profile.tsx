@@ -24,7 +24,7 @@ const ScrollTo = (id: string) => {
 };
 
 let DESKTOP_CONTAINER =
-	'md:border-2 md:border-grey md:h-[800px] md:w-[800px] md:rounded-full md:space-y-2 md:mx-auto';
+	'md:border-[0.5px] md:border-grey md:h-[750px] md:w-[750px] md:rounded-full md:space-y-2 mx-auto';
 
 const Profile = () => {
 	const [headshot, setHeadshot] = useState('');
@@ -40,18 +40,18 @@ const Profile = () => {
 	}, []);
 
 	return (
-		<div className="min-h-screen bg-dark pt-8 md:pt-0">
+		<div className="min-h-screen bg-dark md:pt-0">
 			<div
 				className={`bg-dark text-white flex flex-col items-center space-y-6 ${DESKTOP_CONTAINER}`}
 			>
-				<div className="border-[1px] border-grey w-[320px] rounded-full md:border-none md:mt-52">
+				<div className="border-[0.5px] border-grey w-[320px] rounded-full md:border-none md:mt-52">
 					<img className="rounded-full p-20 md:p-5" src={headshot} />
 				</div>
-				<div className="flex flex-row space-x-10 text-grey text-[1.1rem] md:text-lg md:h-10">
-					<h2 className="mb-2 md:mb-8">S O F T W A R E</h2>
-					<h2>E N G I N E E R</h2>
+				<div className="flex flex-row space-x-10 text-grey text-[1.1rem] md:text-lg md:h-10 tracking-[0.25em] md:tracking-[0.5em]">
+					<h2 className="mb-2 md:mb-8">SOFTWARE</h2>
+					<h2>ENGINEER</h2>
 				</div>
-				<div className="text-2xl md:text-4xl font-bold md:h-6">
+				<div className="text-2xl md:text-3xl font-bold md:h-6">
 					<TypewriterComponent
 						options={{
 							strings: StringList,
@@ -61,11 +61,11 @@ const Profile = () => {
 						}}
 					/>
 				</div>
-				<ul className="flex space-x-4">
+				<ul className="flex space-x-2">
 					{Links.map((data) => {
 						return (
 							<li
-								className="text-sm md:text-lg mt-4 md:mt-8 text-grey hover:cursor-pointer hover:text-dark hover:bg-white rounded-md px-1 md:px-4 ease-in duration-300 tracking-wide"
+								className="text-sm md:text-md mt-4 md:mt-8 text-grey hover:cursor-pointer hover:text-dark hover:bg-white rounded-md px-1 md:px-4 ease-in duration-300 tracking-wide"
 								key={data.title}
 								onClick={() => {
 									ScrollTo(data.id);
