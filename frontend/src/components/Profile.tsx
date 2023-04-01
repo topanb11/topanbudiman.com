@@ -24,7 +24,7 @@ const ScrollTo = (id: string) => {
 };
 
 let DESKTOP_CONTAINER =
-	'md:border-[0.5px] md:border-grey md:h-[750px] md:w-[750px] md:rounded-full md:space-y-2 mx-auto';
+	'md:border-[1px] md:border-grey md:h-[750px] md:w-[750px] md:rounded-full md:space-y-2 2xl:pb-24 mx-auto 2xl:w-[1000px] 2xl:h-[1000px] 2xl:justify-center';
 
 const Profile = () => {
 	const [headshot, setHeadshot] = useState('');
@@ -44,7 +44,7 @@ const Profile = () => {
 			<div
 				className={`bg-dark text-white flex flex-col items-center space-y-6 ${DESKTOP_CONTAINER}`}
 			>
-				<div className="border-[0.5px] border-grey w-[320px] rounded-full md:border-none md:mt-52">
+				<div className="border-[1px] border-grey w-[320px] 2xl:w-[450px] rounded-full md:border-none md:mt-52">
 					<img className="rounded-full p-20 md:p-5" src={headshot} />
 				</div>
 				<div className="flex flex-row space-x-10 text-grey text-[1.1rem] md:text-lg md:h-10 tracking-[0.25em] md:tracking-[0.5em]">

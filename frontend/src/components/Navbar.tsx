@@ -3,7 +3,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import DescriptionIcon from '@mui/icons-material/Description';
 import { useEffect, useState } from 'react';
-import { ResumeFile } from '../interfaces/resume';
+import { ResumeFile } from '../interfaces/Resume';
 import client from '../secrets';
 
 const ICONS: Object = {
