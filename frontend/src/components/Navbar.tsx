@@ -3,19 +3,20 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import DescriptionIcon from '@mui/icons-material/Description';
 import { useEffect, useState } from "react";
+import { Resume } from "../interfaces/resume";
 import client from "../secrets";
 
 const ICONS: Object = {
 	fontSize: 35,
 	color: "#F7F7F7"
-};
+}
 
 const Navbar = () => {
 	const [resume, setResume] = useState("");
 
 	const getResume = () => {
-		client.getEntry('46Qc3NETw9OPsZX3rEmqD9')
-		.then((entry) => setResume(entry.fields.assets.fields.file.url));
+		client.getEntry<Resume>('46Qc3NETw9OPsZX3rEmqD9')
+		.then((res) => setResume(res.fields.assets.fields.file.url));
 	}
 
 	useEffect(() => {
