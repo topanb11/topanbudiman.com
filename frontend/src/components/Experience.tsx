@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import ExperienceTile from './ExperienceTile';
-import { ExperienceCard } from '../interfaces/experience';
+import { ExperienceCard } from '../interfaces/ExperienceCard';
 import client from '../secrets';
 
 const Experience = () => {
@@ -23,8 +23,8 @@ const Experience = () => {
 			id="experience-section"
 			className="min-h-screen text-white overflow-hidden bg-dark pb-24"
 		>
-			<h1 className="text-3xl text-grey text-center mb-10 tracking-widest">
-				E X P E R I E N C E
+			<h1 className="text-3xl text-grey text-center mb-10 tracking-[0.75rem] md:tracking-[1rem]">
+				EXPERIENCE
 			</h1>
 			<ul>
 				{experienceData.map((data, index) => {

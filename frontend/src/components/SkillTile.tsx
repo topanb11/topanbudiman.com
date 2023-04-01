@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { SkillsCard } from '../interfaces/skills';
+import { SkillsCard } from '../interfaces/SkillsCard';
 
 const SkillTile = ({ level, image, order }: SkillsCard) => {
 	const SKILL_LEVEL =

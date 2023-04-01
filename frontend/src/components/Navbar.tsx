@@ -3,7 +3,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import DescriptionIcon from '@mui/icons-material/Description';
 import { useEffect, useState } from 'react';
-import { Resume } from '../interfaces/resume';
+import { ResumeFile } from '../interfaces/resume';
 import client from '../secrets';
 
 const ICONS: Object = {
@@ -16,7 +16,7 @@ const Navbar = () => {
 
 	const getResume = () => {
 		client
-			.getEntry<Resume>('46Qc3NETw9OPsZX3rEmqD9')
+			.getEntry<ResumeFile>('46Qc3NETw9OPsZX3rEmqD9')
 			.then((res) => setResume(res.fields.assets.fields.file.url));
 	};
 

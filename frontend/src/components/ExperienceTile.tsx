@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ExperienceCard } from '../interfaces/experience';
+import { ExperienceCard } from '../interfaces/ExperienceCard';
 
 const ExperienceTile = ({
 	order,
@@ -9,7 +9,7 @@ const ExperienceTile = ({
 	date,
 	headshot,
 }: ExperienceCard) => {
-	const EXPERIENCE_DETAILS = 'italic text-grey md:text-lg';
+	const EXPERIENCE_DETAILS = 'text-grey md:text-lg';
 
 	return (
 		<motion.div
@@ -27,7 +27,7 @@ const ExperienceTile = ({
 			>
 				<img
 					src={headshot.fields.file.url}
-					className="w-24 h-24 md:w-48 md:h-48 rounded-sm"
+					className="w-24 h-24 md:w-48 md:h-48 rounded-md"
 				/>
 				<div className="text-white text-right w-80 md:w-96 border-r-2 border-grey pr-4 h-fit md:space-y-2">
 					<h3 className="font-extrabold text-xl md:text-3xl">{company}</h3>

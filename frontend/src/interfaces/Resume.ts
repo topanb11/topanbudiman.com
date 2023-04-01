@@ -1,6 +1,6 @@
 import * as contentful from 'contentful';
 
-export interface Resume {
+export interface ResumeFile {
 	contentTypeId: 'resume'
 	assets: contentful.Asset
 };
