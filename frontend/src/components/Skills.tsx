@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import SkillTile from './SkillTile';
 import { SkillsCard } from '../interfaces/SkillsCard';
-import client from '../secrets';
+import client from '../client';
 
 const Skills = () => {
 	const [skillData, setSkillData] = useState<SkillsCard[]>([]);

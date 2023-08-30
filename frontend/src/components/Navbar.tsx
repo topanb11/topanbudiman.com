@@ -4,7 +4,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import DescriptionIcon from '@mui/icons-material/Description';
 import { useEffect, useState } from 'react';
 import { ResumeFile } from '../interfaces/Resume';
-import client from '../secrets';
+import client from '../client';
 
 const ICONS: Object = {
 	fontSize: 35,

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import TypewriterComponent from 'typewriter-effect';
-import client from '../secrets';
+import client from '../client';
 import { Headshot } from '../interfaces/Headshot';
 
 const StringList: string[] = [

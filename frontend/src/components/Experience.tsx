@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import ExperienceTile from './ExperienceTile';
 import { ExperienceCard } from '../interfaces/ExperienceCard';
-import client from '../secrets';
+import client from '../client';
 
 const Experience = () => {
 	const [experienceData, setExperienceData] = useState<ExperienceCard[]>([]);
