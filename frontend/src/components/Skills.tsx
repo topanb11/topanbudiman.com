@@ -2,14 +2,15 @@ import { useState, useEffect } from 'react';
 import SkillTile from './SkillTile';
 import { SkillsCard } from '../interfaces/SkillsCard';
 import client from '../client';
+import { Entry } from 'contentful';
 
 const Skills = () => {
 	const [skillData, setSkillData] = useState<SkillsCard[]>([]);
 
 	const getSkills = () => {
 		client.getEntries<SkillsCard>({ content_type: 'skillCard' }).then((res) => {
-			const entries = res.items.map((entry) => entry.fields);
-			entries.sort((a, b) => a.order - b.order);
+			const entries = res.items.map((entry: Entry<SkillsCard>) => entry.fields);
+			entries.sort((a: SkillsCard, b: SkillsCard) => a.order - b.order);
 			setSkillData(entries);
 		});
 	};

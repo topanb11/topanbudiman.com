@@ -1,17 +1,24 @@
 import { useEffect, useState } from 'react';
 import ExperienceTile from './ExperienceTile';
 import { ExperienceCard } from '../interfaces/ExperienceCard';
+import { Entry, EntryCollection } from 'contentful';
 import client from '../client';
 
 const Experience = () => {
 	const [experienceData, setExperienceData] = useState<ExperienceCard[]>([]);
 
 	const getExperienceData = () => {
-		client.getEntries<ExperienceCard>({ content_type: 'topan' }).then((res) => {
-			const entries = res.items.map((entry) => entry.fields);
-			entries.sort((a, b) => a.order - b.order);
-			setExperienceData(entries);
-		});
+		client
+			.getEntries<ExperienceCard>({ content_type: 'topan' })
+			.then((res: EntryCollection<ExperienceCard>) => {
+				const entries = res.items.map(
+					(entry: Entry<ExperienceCard>) => entry.fields
+				);
+				entries.sort(
+					(a: ExperienceCard, b: ExperienceCard) => a.order - b.order
+				);
+				setExperienceData(entries);
+			});
 	};
 
 	useEffect(() => {

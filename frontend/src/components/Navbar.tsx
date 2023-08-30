@@ -5,6 +5,7 @@ import DescriptionIcon from '@mui/icons-material/Description';
 import { useEffect, useState } from 'react';
 import { ResumeFile } from '../interfaces/Resume';
 import client from '../client';
+import { Entry } from 'contentful';
 
 const ICONS: Object = {
 	fontSize: 35,
@@ -17,7 +18,9 @@ const Navbar = () => {
 	const getResume = () => {
 		client
 			.getEntry<ResumeFile>('46Qc3NETw9OPsZX3rEmqD9')
-			.then((res) => setResume(res.fields.assets.fields.file.url));
+			.then((res: Entry<ResumeFile>) =>
+				setResume(res.fields.assets.fields.file.url)
+			);
 	};
 
 	useEffect(() => {

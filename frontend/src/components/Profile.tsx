@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import TypewriterComponent from 'typewriter-effect';
 import client from '../client';
 import { Headshot } from '../interfaces/Headshot';
+import { Entry } from 'contentful';
 
 const StringList: string[] = [
 	'Hi, my name is Topan!',
@@ -31,7 +32,9 @@ const Profile = () => {
 	const getHeadshotUrl = () => {
 		client
 			.getEntry<Headshot>('5OthejOTaaTviOM4FFLXFa')
-			.then((res) => setHeadshot(res.fields.imageUrl.fields.file.url));
+			.then((res: Entry<Headshot>) =>
+				setHeadshot(res.fields.imageUrl.fields.file.url)
+			);
 	};
 
 	useEffect(() => {

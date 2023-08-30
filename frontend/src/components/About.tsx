@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { Headshot } from '../interfaces/Headshot';
-import client from '../secrets';
+import { Entry } from 'contentful';
+import client from '../client';
 
 const DESKTOP_VIEW = 'md:flex-row md:space-x-12';
 
@@ -11,7 +12,9 @@ const About = () => {
 	const getAboutPhoto = () => {
 		client
 			.getEntry<Headshot>('2wHqWNRPcnEafmjwJf1L7w')
-			.then((res) => setAboutPhoto(res.fields.imageUrl.fields.file.url));
+			.then((res: Entry<Headshot>) =>
+				setAboutPhoto(res.fields.imageUrl.fields.file.url)
+			);
 	};
 
 	useEffect(() => {
