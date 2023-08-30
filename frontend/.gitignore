@@ -17,4 +17,4 @@ TODOs.md
 .eslintcache
 .netlify
 .dist
-secrets.tsx
+.env
