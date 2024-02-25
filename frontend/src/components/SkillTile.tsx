@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SkillsCard } from '../interfaces/SkillsCard';
 
@@ -11,6 +10,7 @@ const SkillTile = ({ level, image, order }: SkillsCard) => {
 			initial="hidden"
 			whileInView="visible"
 			transition={{ duration: order * 0.05 }}
+			viewport={{ once: true }}
 			variants={{
 				visible: { opacity: 1 },
 				hidden: { opacity: 0.25 },

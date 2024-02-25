@@ -36,6 +36,7 @@ const About = () => {
 					initial="hidden"
 					whileInView="visible"
 					transition={{ duration: 0.75 }}
+					viewport={{ once: true }}
 					variants={{
 						visible: { x: 0, opacity: 1 },
 						hidden: { x: -100, opacity: 0.5 },
@@ -48,13 +49,12 @@ const About = () => {
 						Here is a <span className="underline">little</span> background
 					</h2>
 					<p className="w-72 text-justify md:text-left md:w-[700px] md:text-xl">
-						I'm Topan! I am currently in my third year of Software Engineering
-						at the University of Calgary. My current interest at the moment is
-						full-stack development which is reflected by my projects and work
-						experience! You can catch me interning at Vena Solutions this
-						upcoming May 2023. Along with that I am also seeking internships for
-						Summer 2024! In my freetime I also enjoy learning new things 💻
-						working out 💪 and taking pics! 📸
+						I'm Topan! I am in my fourth year of Software Engineering at the
+						University of Calgary. My current interests are in full-stack,
+						frontend and backend development which is reflected by my work
+						experiene and projects. I will be interning at Wave HQ in Toronto
+						this upcoming May 2024! In my freetime I also enjoy learning new
+						things 💻 working out 💪 playing volleyball 🏐 and photography! 📸
 					</p>
 				</div>
 			</div>

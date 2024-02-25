@@ -16,6 +16,7 @@ const ExperienceTile = ({
 			initial="hidden"
 			whileInView="visible"
 			transition={{ duration: 0.8 }}
+			viewport={{ once: true }}
 			variants={{
 				visible: { x: 0, opacity: 1 },
 				hidden: { x: order % 2 == 0 ? 100 : -100, opacity: 0.5 },
@@ -31,7 +32,7 @@ const ExperienceTile = ({
 				/>
 				<div className="text-white text-right w-80 md:w-96 border-r-2 border-grey pr-4 h-fit md:space-y-2">
 					<h3 className="font-extrabold text-xl md:text-3xl">{company}</h3>
-					<h3 className="text-xl">{experience}</h3>
+					<h3 className="text-lg md:text-xl">{experience}</h3>
 					<h3 className={EXPERIENCE_DETAILS}>{date}</h3>
 					<h3 className={EXPERIENCE_DETAILS}>{location}</h3>
 				</div>

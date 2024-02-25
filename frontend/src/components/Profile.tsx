@@ -6,7 +6,7 @@ import { Entry } from 'contentful';
 
 const StringList: string[] = [
 	'Hi, my name is Topan!',
-	'3rd Year SWE @ UCalgary',
+	'4th Year SWE @ UCalgary',
 ];
 
 const Links = [
